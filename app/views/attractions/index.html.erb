@@ -1,0 +1,11 @@
+<h1>Listing attractions</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Tickets</th>
+  </tr>
+
+  <%= render partial: 'index', collection: @attractions, as: :attraction %>
+
+</table>

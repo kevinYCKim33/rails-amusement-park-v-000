@@ -2,6 +2,7 @@ class AttractionsController < ApplicationController
   before_action :set_attraction, only: [:show, :edit, :update, :destroy]
 
   def index
+    @attractions = Attraction.all
   end
 
   def new
@@ -31,7 +32,7 @@ class AttractionsController < ApplicationController
 
   private
 
-  def set_user
+  def set_attraction
     @attraction = Attraction.find_by(id: params[:id])
   end
 
