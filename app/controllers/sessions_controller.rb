@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-    binding.pry
    @user = User.find_by(name: params[:user][:name])
    if @user
      if @user.authenticate(params[:user][:password])
@@ -22,7 +21,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session.delete :user_id
-    redirect_to signin_path
+    redirect_to root_path
   end
 
 end
