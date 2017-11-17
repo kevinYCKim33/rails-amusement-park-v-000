@@ -1,4 +1,4 @@
 <tr>
-  <td><%= link_to "Go on #{attraction.name}", attraction_path(attraction) %></td>
+  <td><%= link_to attraction_display(attraction), attraction_path(attraction) %></td>
   <td><%= attraction.tickets %></td>
 </tr>
