@@ -1,0 +1,14 @@
+<b>Name: </b> <%= @attraction.name %>
+<br>
+<b>Ticket Requirements: </b> <%= @attraction.tickets %>
+<br>
+<b>Height Requirements: </b> <%= @attraction.min_height %> inches
+<br>
+<b>Nausea Rating: </b> <%= @attraction.nausea_rating %>
+<br>
+<b>Happiness Rating: </b> <%= @attraction.happiness_rating %>
+
+<%= form_for @attraction, url: take_ride_path, method: :post do |f| %>
+  <%= f.hidden_field :id %>
+  <%= f.submit "Go on this ride" %>
+<% end %>
